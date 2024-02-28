@@ -18,15 +18,15 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     async login () {
-        await this.inputUsername.setValue(process.env.USERNAME_STANDARTUSER);
+        await this.inputUsername.setValue(process.env.USERNAME_STANDARD_USER);
         await this.inputPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
         await this.btnLogin.click();
     }
     async login () {
-        await this.inputUsername.setValue(process.env.USERNAME_lockedOutUser);
+        await this.inputUsername.setValue(process.env.USERNAME_LOCKED_OUT_USER);
         await this.inputPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
         await this.btnLogin.click();
-        console.log('USERNAME = ${process.env.USERNAME_LockedOutUser}')
+        console.log('USERNAME = ${process.env.USERNAME_LOCKED_OUT_USER}')
     }
 
     async validateLockedOutUserError () {
